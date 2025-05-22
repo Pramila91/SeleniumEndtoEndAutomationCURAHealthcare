@@ -1,0 +1,32 @@
+Manual Test Cases: CURA Healthcare Service
+TC ID	Test Case Title	Preconditions	Test Steps	Expected Result	Priority	Status
+TC01	Login with valid credentials	User on login page	1. Enter John Doe
+2. Enter ThisIsNotAPassword
+3. Click Login	Redirected to the appointment page	High	Not Run
+TC02	Login with invalid credentials	User on login page	1. Enter wronguser
+2. Enter wrongpass
+3. Click Login	Error message is displayed	High	Not Run
+TC03	Logout functionality	Logged into system	1. Click hamburger menu
+2. Click Logout	Redirected to login page	Medium	Not Run
+TC04	Book appointment with all valid inputs	Logged in, on appointment page	1. Choose facility
+2. Select options
+3. Choose date
+4. Enter comment
+5. Click Book Appointment	Redirect to confirmation page with correct details	High	Not Run
+TC05	Submit appointment with missing required data	Logged in, on appointment page	1. Leave date field empty
+2. Click Book Appointment	Error message shown, form not submitted	High	Not Run
+TC06	Validate default facility dropdown options	Logged in	1. Open appointment form
+2. Click facility dropdown	List contains Tokyo CURA, Hongkong CURA, Seoul CURA	Medium	Not Run
+TC07	Navigation menu works correctly	Logged in	1. Click hamburger menu
+2. Click each menu option	Proper navigation to each section (e.g., History, Profile)	Low	Not Run
+TC08	Verify appointment confirmation details	Appointment booked	1. Submit valid form
+2. Review confirmation screen	All selected details are shown correctly	Medium	Not Run
+TC09	Check responsiveness on mobile view	Mobile browser	Open site on mobile
+Book appointment	All elements are visible and functional	Medium	Not Run
+TC10	Attempt script injection in comment box	Logged in	1. Enter <script>alert(1)</script> in comment
+2. Submit form	Input is sanitized or rejected	Medium	Not Run
+TC11	Check link integrity	Any page	1. Click all links in footer/menu	All links open valid pages (no 404s)	Low	Not Run
+TC12	Attempt booking without login	Open home page	1. Click Make Appointment without logging in	Redirected to login page	High	Not Run
+TC13	Verify password is masked	Login page	1. Enter password in password field	Characters appear as bullets/dots	Medium	Not Run
+TC14	Validate date picker functionality	Appointment form	1. Click on date field
+2. Select date	Calendar widget works, date is selected	Medium	Not Run
